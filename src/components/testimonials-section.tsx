@@ -88,7 +88,7 @@ export function TestimonialsSection() {
             What Our Clients Say
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what business owners and entrepreneurs 
+            Don&apos;t just take our word for it. Here&apos;s what business owners and entrepreneurs 
             have to say about working with Bonohc, Demerin & Associates.
           </p>
         </motion.div>
@@ -107,7 +107,7 @@ export function TestimonialsSection() {
                 <div className="text-center mb-8">
                   <Quote className="h-12 w-12 text-primary/20 mx-auto mb-4" />
                   <blockquote className="text-xl md:text-2xl leading-relaxed text-gray-700 mb-6 italic">
-                    "{testimonials[currentIndex].content}"
+                    &ldquo;{testimonials[currentIndex].content}&rdquo;
                   </blockquote>
                   
                   <div className="flex justify-center mb-4">
@@ -202,7 +202,7 @@ export function TestimonialsSection() {
                     </div>
                   </div>
                   <p className="text-sm text-gray-600 line-clamp-3">
-                    "{testimonial.content.substring(0, 120)}..."
+                    &ldquo;{testimonial.content.substring(0, 120)}...&rdquo;
                   </p>
                   <div className="flex justify-between items-center mt-4">
                     <div className="flex">
