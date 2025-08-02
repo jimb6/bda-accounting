@@ -1,59 +1,273 @@
+"use client"
+
+import { useState, useEffect } from "react"
+import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { ArrowRight, CheckCircle } from "lucide-react"
+import { ImagePlaceholder } from "@/components/image-placeholder"
+import { ArrowRight, CheckCircle, ChevronLeft, ChevronRight, Star, Award, TrendingUp } from "lucide-react"
+
+const heroSlides = [
+  {
+    title: "Expert Accounting Services",
+    subtitle: "Your Business Success",
+    description: "25+ years of trusted financial expertise to help your business thrive and grow.",
+    image: "Professional team meeting",
+    bgColor: "bg-gradient-to-br from-blue-600 to-indigo-700"
+  },
+  {
+    title: "Tax Planning & Preparation",
+    subtitle: "Maximize Your Savings",
+    description: "Strategic tax solutions that minimize liability and ensure full compliance.",
+    image: "Tax documents and calculator",
+    bgColor: "bg-gradient-to-br from-green-600 to-emerald-700"
+  },
+  {
+    title: "Business Consultation",
+    subtitle: "Strategic Growth Planning",
+    description: "Professional guidance to help you make informed financial decisions.",
+    image: "Business consultation meeting",
+    bgColor: "bg-gradient-to-br from-purple-600 to-violet-700"
+  }
+]
+
+const stats = [
+  { icon: Star, value: "500+", label: "Happy Clients" },
+  { icon: Award, value: "25+", label: "Years Experience" },
+  { icon: TrendingUp, value: "99%", label: "Success Rate" },
+]
 
 export function HeroSection() {
+  const [currentSlide, setCurrentSlide] = useState(0)
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length)
+    }, 5000)
+    return () => clearInterval(timer)
+  }, [])
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % heroSlides.length)
+  }
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length)
+  }
+
   return (
-    <section className="relative py-20 lg:py-32 bg-gradient-to-br from-background to-muted/20">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <Badge variant="outline" className="mb-6">
-            Trusted for Over 25 Years
-          </Badge>
-          
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
-            Expert Accounting Services for
-            <span className="text-primary block">Your Business Success</span>
-          </h1>
-          
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Bonohc, Demerin & Associates provides comprehensive accounting, tax, and consultation 
-            services to help your business thrive. Let our certified professionals handle your 
-            financial needs while you focus on growing your business.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button size="lg" className="text-lg px-8">
-              Schedule Consultation
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button variant="outline" size="lg" className="text-lg px-8">
-              View Our Services
-            </Button>
-          </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
-            <div className="flex items-center justify-center space-x-2">
-              <CheckCircle className="h-5 w-5 text-green-500" />
-              <span className="font-medium">Certified CPAs</span>
-            </div>
-            <div className="flex items-center justify-center space-x-2">
-              <CheckCircle className="h-5 w-5 text-green-500" />
-              <span className="font-medium">25+ Years Experience</span>
-            </div>
-            <div className="flex items-center justify-center space-x-2">
-              <CheckCircle className="h-5 w-5 text-green-500" />
-              <span className="font-medium">500+ Satisfied Clients</span>
-            </div>
-          </div>
+    <section className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Background Carousel */}
+      <div className="absolute inset-0">
+        {heroSlides.map((slide, index) => (
+          <motion.div
+            key={index}
+            className={`absolute inset-0 ${slide.bgColor}`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: index === currentSlide ? 1 : 0 }}
+            transition={{ duration: 1 }}
+          />
+        ))}
+        
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/40" />
+        
+        {/* Animated background elements */}
+        <div className="absolute inset-0">
+          <motion.div
+            className="absolute top-20 left-10 w-20 h-20 rounded-full bg-white/10"
+            animate={{ y: [0, -20, 0], x: [0, 10, 0] }}
+            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <motion.div
+            className="absolute bottom-32 right-16 w-16 h-16 rounded-full bg-white/5"
+            animate={{ y: [0, 15, 0], x: [0, -15, 0] }}
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <motion.div
+            className="absolute top-1/2 right-1/4 w-12 h-12 rounded-full bg-white/8"
+            animate={{ rotate: [0, 360] }}
+            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+          />
         </div>
       </div>
-      
-      {/* Background decoration */}
-      <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute -top-40 -right-32 w-80 h-80 rounded-full bg-primary/5 blur-3xl"></div>
-        <div className="absolute -bottom-40 -left-32 w-80 h-80 rounded-full bg-primary/5 blur-3xl"></div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Content */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-white"
+          >
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+            >
+              <Badge variant="outline" className="mb-6 bg-white/10 border-white/20 text-white">
+                <Award className="w-4 h-4 mr-2" />
+                Trusted for Over 25 Years
+              </Badge>
+            </motion.div>
+            
+            <motion.div
+              key={currentSlide}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                {heroSlides[currentSlide].title}
+                <span className="block text-yellow-400 text-4xl md:text-5xl mt-2">
+                  {heroSlides[currentSlide].subtitle}
+                </span>
+              </h1>
+              
+              <p className="text-xl mb-8 text-gray-100 max-w-lg leading-relaxed">
+                {heroSlides[currentSlide].description}
+              </p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.6 }}
+              className="flex flex-col sm:flex-row gap-4 mb-12"
+            >
+              <Button size="lg" className="text-lg px-8 bg-yellow-500 hover:bg-yellow-600 text-black font-semibold">
+                Get Free Consultation
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+              <Button variant="outline" size="lg" className="text-lg px-8 border-white text-white hover:bg-white hover:text-black">
+                View Our Services
+              </Button>
+            </motion.div>
+            
+            {/* Stats */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8, duration: 0.6 }}
+              className="grid grid-cols-3 gap-6"
+            >
+              {stats.map((stat, index) => {
+                const IconComponent = stat.icon
+                return (
+                  <motion.div
+                    key={index}
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{ delay: 1 + index * 0.2, duration: 0.5 }}
+                    className="text-center"
+                  >
+                    <div className="flex items-center justify-center mb-2">
+                      <IconComponent className="h-6 w-6 text-yellow-400 mr-2" />
+                      <span className="text-2xl font-bold">{stat.value}</span>
+                    </div>
+                    <p className="text-sm text-gray-300">{stat.label}</p>
+                  </motion.div>
+                )
+              })}
+            </motion.div>
+          </motion.div>
+
+          {/* Image */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="relative"
+          >
+            <motion.div
+              key={currentSlide}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8 }}
+              className="relative z-10"
+            >
+              <ImagePlaceholder
+                width={600}
+                height={400}
+                text={heroSlides[currentSlide].image}
+                className="w-full h-[400px] shadow-2xl"
+                bgColor="bg-white/95"
+                textColor="text-gray-700"
+              />
+            </motion.div>
+            
+            {/* Floating elements */}
+            <motion.div
+              className="absolute -top-6 -left-6 w-24 h-24 bg-yellow-400 rounded-full flex items-center justify-center shadow-lg"
+              animate={{ rotate: [0, 10, -10, 0] }}
+              transition={{ duration: 4, repeat: Infinity }}
+            >
+              <CheckCircle className="h-12 w-12 text-black" />
+            </motion.div>
+            
+            <motion.div
+              className="absolute -bottom-6 -right-6 w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-lg"
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 3, repeat: Infinity }}
+            >
+              <Star className="h-10 w-10 text-yellow-500" />
+            </motion.div>
+          </motion.div>
+        </div>
       </div>
+
+      {/* Carousel Controls */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
+        <div className="flex items-center space-x-4">
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={prevSlide}
+            className="bg-white/10 border-white/20 text-white hover:bg-white hover:text-black"
+          >
+            <ChevronLeft className="h-4 w-4" />
+          </Button>
+          
+          <div className="flex space-x-2">
+            {heroSlides.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all ${
+                  index === currentSlide ? 'bg-yellow-400 w-8' : 'bg-white/40'
+                }`}
+              />
+            ))}
+          </div>
+          
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={nextSlide}
+            className="bg-white/10 border-white/20 text-white hover:bg-white hover:text-black"
+          >
+            <ChevronRight className="h-4 w-4" />
+          </Button>
+        </div>
+      </div>
+
+      {/* Scroll indicator */}
+      <motion.div
+        className="absolute bottom-8 right-8 z-20"
+        animate={{ y: [0, 10, 0] }}
+        transition={{ duration: 2, repeat: Infinity }}
+      >
+        <div className="text-white text-sm">
+          <div className="w-6 h-10 border-2 border-white/40 rounded-full p-1">
+            <motion.div
+              className="w-1 h-3 bg-white/60 rounded-full mx-auto"
+              animate={{ y: [0, 12, 0] }}
+              transition={{ duration: 2, repeat: Infinity }}
+            />
+          </div>
+        </div>
+      </motion.div>
     </section>
   )
 }
