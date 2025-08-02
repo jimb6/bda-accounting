@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Menu, Phone, Mail, MapPin } from "lucide-react"
@@ -41,12 +42,19 @@ export function Navigation() {
       {/* Main navigation */}
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="font-bold text-xl text-primary">
-              BDA
+          <Link href="/" className="flex items-center space-x-3">
+            <div className="relative">
+              <Image
+                src="/images/logo.png"
+                alt="Bonhoc, Demerin & Associates Logo"
+                width={48}
+                height={48}
+                className="h-12 w-auto drop-shadow-md bg-white/10 backdrop-blur-sm rounded-lg p-1 border border-white/20"
+                priority
+              />
             </div>
             <div className="hidden sm:block">
-              <div className="text-lg font-semibold">Bonohc, Demerin & Associates</div>
+              <div className="text-lg font-semibold">Bonhoc, Demerin & Associates</div>
               <div className="text-xs text-muted-foreground">Certified Public Accountants</div>
             </div>
           </Link>

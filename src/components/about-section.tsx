@@ -5,22 +5,22 @@ import { Award, Users, TrendingUp } from "lucide-react"
 
 const teamMembers = [
   {
-    name: "Michael Bonohc",
-    title: "Senior Partner, CPA",
-    initials: "MB",
-    specialties: ["Tax Planning", "Business Consulting"],
+    name: "Joevanie L. Bonhoc",
+    title: "Co-Founder & Senior Partner, CPA",
+    initials: "JB",
+    specialties: ["Tax Compliance", "Business Strategy", "SME Development"],
   },
   {
-    name: "Sarah Demerin",
-    title: "Partner, CPA",
-    initials: "SD",
-    specialties: ["Audit Services", "Financial Reporting"],
+    name: "Marjo Q. Demerin-Bonhoc",
+    title: "Co-Founder & Senior Partner, CPA",
+    initials: "MD",
+    specialties: ["Audit Services", "Management Accounting", "Financial Reporting"],
   },
   {
-    name: "David Associates",
-    title: "Partner, CPA",
-    initials: "DA",
-    specialties: ["Small Business", "Payroll Services"],
+    name: "Atty. James Bernal",
+    title: "Partner, CPA (Surigao Branch)",
+    initials: "JB",
+    specialties: ["Legal Advisory", "Tax Law", "Partnership Services"],
   },
 ]
 
@@ -28,17 +28,17 @@ const achievements = [
   {
     icon: Award,
     title: "Certified Excellence",
-    description: "All partners are certified CPAs with advanced degrees in accounting and finance.",
+    description: "All partners are certified CPAs with over a decade of experience in accounting and business industry.",
   },
   {
     icon: Users,
-    title: "Client-Focused Approach",
-    description: "We build long-term relationships with personalized service for each client.",
+    title: "SME-Focused Approach",
+    description: "Dedicated to empowering Small and Medium Enterprises across the Philippines and Asia-Pacific Region.",
   },
   {
     icon: TrendingUp,
-    title: "Proven Results",
-    description: "Helping businesses save thousands in taxes and improve financial efficiency.",
+    title: "Regional Expertise",
+    description: "Successfully serving clients across multiple countries in the Asia-Pacific Region with expanding CPA team.",
   },
 ]
 
@@ -51,18 +51,19 @@ export function AboutSection() {
           <div>
             <Badge variant="outline" className="mb-4">About Our Firm</Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              25+ Years of Financial Excellence
+              8+ Years of Financial Excellence
             </h2>
             <p className="text-lg text-muted-foreground mb-6">
-              Founded in 1998, Bonohc, Demerin & Associates has been providing exceptional 
-              accounting and financial services to businesses and individuals throughout the region. 
-              Our team of certified public accountants combines decades of experience with 
-              cutting-edge technology to deliver accurate, timely, and cost-effective solutions.
+              Founded in 2017, Bonhoc, Demerin & Associates is a distinguished professional 
+              firm established by Joevanie L. Bonhoc and Marjo Q. Demerin-Bonhoc, both 
+              accomplished Certified Public Accountants with more than a decade of experience 
+              in the accounting and business industry.
             </p>
             <p className="text-lg text-muted-foreground mb-8">
-              We understand that every client is unique, which is why we take a personalized 
-              approach to each engagement. Whether you're a small startup or an established 
-              corporation, we're committed to helping you achieve your financial goals.
+              Our firm is dedicated to empowering Small and Medium Enterprises (SMEs) across 
+              the Philippines by providing solutions to address tax burdens and facilitating 
+              business growth. We have successfully assisted numerous clients, not only within 
+              the Philippines but also from various countries across the Asia-Pacific Region.
             </p>
             
             <div className="space-y-4">

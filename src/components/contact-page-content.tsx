@@ -56,24 +56,25 @@ const offices = [
     address: "Door No. 4 Saint John Paul II College of Davao, Ecoland Drive, Matina",
     city: "Davao City, Philippines",
     phone: "+63 950 761 2580",
-    specialties: ["Tax Compliance", "Business Registration", "Management Accounting"],
+    specialties: ["Tax Compliance", "Business Registration", "Management Accounting", "Audit Services"],
     image: "Modern CPA office in Davao City"
   },
   {
-    name: "Asia-Pacific Services",
-    address: "Regional Service Coverage", 
-    city: "Multiple Countries",
+    name: "Panabo Branch",
+    address: "Door 10, Sheina's Building, Magsaysay Street, New Pandan", 
+    city: "Panabo City, Philippines",
     phone: "+63 950 761 2580",
-    specialties: ["International Compliance", "Cross-border Services", "Regional Consulting"],
-    image: "Asia-Pacific regional services"
+    specialties: ["Tax Compliance", "Business Registration", "Small Business Services", "Local Consultation"],
+    image: "Professional branch office in Panabo"
   },
   {
-    name: "Digital Services Hub",
-    address: "Online Consultation Platform",
-    city: "Virtual Office", 
+    name: "Surigao Branch",
+    address: "Door 2, Milagros Building, Magsaysay Street, Dgocdoc",
+    city: "Tandag City, Surigao del Sur, Philippines", 
     phone: "+63 950 761 2580",
-    specialties: ["Virtual Consultations", "Digital Solutions", "Remote Support"],
-    image: "Digital accounting solutions"
+    specialties: ["Partnership Services", "Regional Compliance", "Legal & Tax Advisory", "CPA Consultation"],
+    image: "Partnership office in Surigao del Sur",
+    partnership: "In partnership with Atty. James Bernal, CPA"
   }
 ]
 
@@ -391,9 +392,9 @@ export function ContactPageContent() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Locations</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Office Locations</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              We have multiple convenient locations to serve you better.
+              Visit us at our main office in Davao City or our branch locations in Panabo and Surigao del Sur.
             </p>
           </motion.div>
 
@@ -423,6 +424,11 @@ export function ContactPageContent() {
                     <div>
                       <p className="text-sm text-muted-foreground mb-1">{office.address}</p>
                       <p className="text-sm font-medium">{office.phone}</p>
+                      {office.partnership && (
+                        <p className="text-xs text-blue-600 font-medium mt-2 italic">
+                          {office.partnership}
+                        </p>
+                      )}
                     </div>
                     
                     <div>
