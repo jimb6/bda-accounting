@@ -2,11 +2,11 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
+import Image from "next/image"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { ImagePlaceholder } from "@/components/image-placeholder"
 import { 
   Calculator, 
   Users, 
@@ -263,14 +263,19 @@ export function ServicesPageContent() {
                 </div>
 
                 <div className="space-y-6">
-                  <ImagePlaceholder
-                    width={500}
-                    height={350}
-                    text={service.image}
-                    className="w-full h-[350px] rounded-lg shadow-lg"
-                    bgColor={service.bgColor}
-                    textColor="text-gray-600"
-                  />
+                  <div className="w-full h-[350px] rounded-lg shadow-lg bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-8">
+                    <div className="text-center">
+                      <Image
+                        src="/images/logo.png"
+                        alt="BDA Services"
+                        width={250}
+                        height={150}
+                        className="mx-auto drop-shadow-sm object-contain"
+                        style={{ maxHeight: '150px', width: 'auto' }}
+                      />
+                      <p className="text-sm text-gray-600 mt-4">{service.image}</p>
+                    </div>
+                  </div>
                   
                   <Card>
                     <CardContent className="p-6">

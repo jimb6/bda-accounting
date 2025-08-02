@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
+import Image from "next/image"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -9,7 +10,6 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { ImagePlaceholder } from "@/components/image-placeholder"
 import { 
   Phone, 
   Mail, 
@@ -338,14 +338,19 @@ export function ContactPageContent() {
                   <CardDescription>Visit our main office location</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <ImagePlaceholder
-                    width={400}
-                    height={250}
-                    text="Interactive Map - Main Office Location"
-                    className="w-full h-[250px] rounded-lg mb-4"
-                    bgColor="bg-green-50"
-                    textColor="text-gray-600"
-                  />
+                  <div className="w-full h-[250px] rounded-lg mb-4 bg-green-50 flex items-center justify-center p-6">
+                    <div className="text-center">
+                      <Image
+                        src="/images/logo.png"
+                        alt="BDA Office Location"
+                        width={200}
+                        height={120}
+                        className="mx-auto drop-shadow-sm object-contain"
+                        style={{ maxHeight: '120px', width: 'auto' }}
+                      />
+                      <p className="text-sm text-gray-600 mt-3">Interactive Map - Main Office Location</p>
+                    </div>
+                  </div>
                   <div className="space-y-2">
                     <p className="font-semibold">Bonhoc, Demerin & Associates</p>
                     <p className="text-sm text-muted-foreground">Door No. 4 Saint John Paul II College of Davao</p>
@@ -409,14 +414,19 @@ export function ContactPageContent() {
               >
                 <Card className="h-full hover:shadow-lg transition-shadow">
                   <CardHeader>
-                    <ImagePlaceholder
-                      width={300}
-                      height={150}
-                      text={office.image}
-                      className="w-full h-[150px] rounded-lg mb-4"
-                      bgColor="bg-blue-50"
-                      textColor="text-gray-600"
-                    />
+                    <div className="w-full h-[150px] rounded-lg mb-4 bg-blue-50 flex items-center justify-center p-4">
+                      <div className="text-center">
+                        <Image
+                          src="/images/logo.png"
+                          alt={office.name}
+                          width={120}
+                          height={80}
+                          className="mx-auto drop-shadow-sm object-contain"
+                          style={{ maxHeight: '80px', width: 'auto' }}
+                        />
+                        <p className="text-xs text-gray-500 mt-2">{office.image}</p>
+                      </div>
+                    </div>
                     <CardTitle className="text-xl">{office.name}</CardTitle>
                     <CardDescription>{office.city}</CardDescription>
                   </CardHeader>

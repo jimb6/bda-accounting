@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { ImagePlaceholder } from "@/components/image-placeholder"
 import { ArrowRight, CheckCircle, ChevronLeft, ChevronRight, Star, Award, TrendingUp } from "lucide-react"
 
 const heroSlides = [
@@ -187,14 +187,30 @@ export function HeroSection() {
               transition={{ duration: 0.8 }}
               className="relative z-10"
             >
-              <ImagePlaceholder
-                width={600}
-                height={400}
-                text={heroSlides[currentSlide].image}
-                className="w-full h-[400px] shadow-2xl"
-                bgColor="bg-white/95"
-                textColor="text-gray-700"
-              />
+              <div className="w-full h-[400px] bg-white/95 rounded-lg shadow-2xl flex flex-col items-center justify-center overflow-hidden p-6">
+                <div className="text-center flex-1 flex flex-col justify-center">
+                  <Image
+                    src="/images/logo.png"
+                    alt="Bonhoc, Demerin & Associates Logo"
+                    width={250}
+                    height={150}
+                    className="mx-auto mb-4 drop-shadow-md object-contain"
+                    style={{ maxHeight: '150px', width: 'auto' }}
+                    priority
+                  />
+                  <div className="space-y-1">
+                    <h3 className="text-xl font-bold text-gray-800">
+                      Bonhoc, Demerin & Associates
+                    </h3>
+                    <p className="text-base text-gray-600">
+                      Certified Public Accountants
+                    </p>
+                    <p className="text-sm text-gray-500 mt-2">
+                      {heroSlides[currentSlide].image}
+                    </p>
+                  </div>
+                </div>
+              </div>
             </motion.div>
             
             {/* Floating elements */}

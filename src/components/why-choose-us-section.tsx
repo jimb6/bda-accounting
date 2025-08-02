@@ -2,10 +2,10 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
+import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { ImagePlaceholder } from "@/components/image-placeholder"
 import { 
   Award, 
   Users, 
@@ -189,14 +189,19 @@ export function WhyChooseUsSection() {
                   {features[activeFeature].description}
                 </p>
                 
-                <ImagePlaceholder
-                  width={400}
-                  height={250}
-                  text={features[activeFeature].image}
-                  className="w-full h-[250px] rounded-lg mb-6"
-                  bgColor={features[activeFeature].bgColor}
-                  textColor="text-gray-600"
-                />
+                <div className="w-full h-[250px] rounded-lg mb-6 bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-6">
+                  <div className="text-center">
+                    <Image
+                      src="/images/logo.png"
+                      alt="BDA Services"
+                      width={200}
+                      height={120}
+                      className="mx-auto drop-shadow-sm object-contain"
+                      style={{ maxHeight: '120px', width: 'auto' }}
+                    />
+                    <p className="text-sm text-gray-600 mt-3">{features[activeFeature].image}</p>
+                  </div>
+                </div>
                 
                 <Button className="w-full">
                   Learn More About This

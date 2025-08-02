@@ -2,10 +2,10 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ImagePlaceholder } from "@/components/image-placeholder"
 import { Phone, Mail, MapPin, Clock, Send, Calendar, CheckCircle } from "lucide-react"
 
 const contactInfo = [
@@ -186,14 +186,19 @@ export function ContactSection() {
                 transition={{ delay: 0.6 }}
                 viewport={{ once: true }}
               >
-                <ImagePlaceholder
-                  width={300}
-                  height={200}
-                  text="Our Professional Office"
-                  className="w-full h-[200px] rounded-lg"
-                  bgColor="bg-gradient-to-br from-blue-50 to-indigo-100"
-                  textColor="text-gray-600"
-                />
+                <div className="w-full h-[200px] rounded-lg bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-6">
+                  <div className="text-center">
+                    <Image
+                      src="/images/logo.png"
+                      alt="BDA Office"
+                      width={150}
+                      height={100}
+                      className="mx-auto drop-shadow-sm object-contain"
+                      style={{ maxHeight: '100px', width: 'auto' }}
+                    />
+                    <p className="text-sm text-gray-600 mt-2">Our Professional Office</p>
+                  </div>
+                </div>
               </motion.div>
             </div>
           </motion.div>
@@ -213,7 +218,7 @@ export function ContactSection() {
                   Send us a Message
                 </CardTitle>
                 <p className="text-muted-foreground">
-                  Fill out the form below and we'll get back to you within 24 hours.
+                  Fill out the form below and we&apos;ll get back to you within 24 hours.
                 </p>
               </CardHeader>
               <CardContent>

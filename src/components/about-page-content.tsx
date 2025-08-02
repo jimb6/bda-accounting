@@ -1,10 +1,10 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Image from "next/image"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { ImagePlaceholder } from "@/components/image-placeholder"
 import { 
   Award, 
   Users, 
@@ -212,14 +212,19 @@ export function AboutPageContent() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <ImagePlaceholder
-                width={500}
-                height={400}
-                text="Office team collaboration"
-                className="w-full h-[400px] rounded-lg shadow-lg"
-                bgColor="bg-blue-50"
-                textColor="text-gray-600"
-              />
+              <div className="w-full h-[400px] rounded-lg shadow-lg bg-blue-50 flex items-center justify-center p-8">
+                <div className="text-center">
+                  <Image
+                    src="/images/logo.png"
+                    alt="BDA Team"
+                    width={300}
+                    height={180}
+                    className="mx-auto drop-shadow-sm object-contain"
+                    style={{ maxHeight: '180px', width: 'auto' }}
+                  />
+                  <p className="text-sm text-gray-600 mt-4">Office team collaboration</p>
+                </div>
+              </div>
             </motion.div>
           </div>
         </div>
@@ -294,14 +299,16 @@ export function AboutPageContent() {
               >
                 <Card className="h-full hover:shadow-lg transition-shadow">
                   <CardHeader className="text-center">
-                    <ImagePlaceholder
-                      width={150}
-                      height={150}
-                      text={`${member.name} headshot`}
-                      className="w-32 h-32 rounded-full mx-auto mb-4"
-                      bgColor="bg-gray-100"
-                      textColor="text-gray-500"
-                    />
+                    <div className="w-32 h-32 rounded-full mx-auto mb-4 bg-gray-100 flex items-center justify-center overflow-hidden">
+                      <Image
+                        src="/images/logo.png"
+                        alt={member.name}
+                        width={80}
+                        height={80}
+                        className="object-contain"
+                        style={{ maxHeight: '80px', width: 'auto' }}
+                      />
+                    </div>
                     <CardTitle className="text-xl">{member.name}</CardTitle>
                     <CardDescription className="text-primary font-semibold">
                       {member.title}

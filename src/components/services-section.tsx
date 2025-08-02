@@ -1,10 +1,10 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Image from "next/image"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { ImagePlaceholder } from "@/components/image-placeholder"
 import { Calculator, Users, FileText, Shield, ArrowRight, CheckCircle } from "lucide-react"
 
 const services = [
@@ -158,14 +158,19 @@ export function ServicesSection() {
                       </div>
                       
                       <div className="space-y-4">
-                        <ImagePlaceholder
-                          width={250}
-                          height={150}
-                          text={service.image}
-                          className="w-full h-[150px] rounded-lg"
-                          bgColor={service.bgColor}
-                          textColor="text-gray-600"
-                        />
+                        <div className="w-full h-[150px] rounded-lg bg-white/95 flex items-center justify-center p-4">
+                          <div className="text-center">
+                            <Image
+                              src="/images/logo.png"
+                              alt="BDA Logo"
+                              width={120}
+                              height={80}
+                              className="mx-auto drop-shadow-sm object-contain"
+                              style={{ maxHeight: '80px', width: 'auto' }}
+                            />
+                            <p className="text-xs text-gray-500 mt-2">{service.image}</p>
+                          </div>
+                        </div>
                         
                         <Button className="w-full group" variant="outline">
                           Learn More
