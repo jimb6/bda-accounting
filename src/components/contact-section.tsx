@@ -70,11 +70,11 @@ export function ContactSection() {
   }
 
   return (
-    <section className="py-20 bg-background relative overflow-hidden">
+    <section className="py-12 lg:py-20 bg-background relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-50/30 to-purple-50/30" />
-      <div className="absolute top-20 right-20 w-40 h-40 bg-blue-200/20 rounded-full blur-2xl" />
-      <div className="absolute bottom-20 left-20 w-32 h-32 bg-purple-200/20 rounded-full blur-xl" />
+      <div className="absolute top-10 lg:top-20 right-4 lg:right-20 w-24 lg:w-40 h-24 lg:h-40 bg-blue-200/20 rounded-full blur-2xl" />
+      <div className="absolute bottom-10 lg:bottom-20 left-4 lg:left-20 w-20 lg:w-32 h-20 lg:h-32 bg-purple-200/20 rounded-full blur-xl" />
       
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
@@ -82,21 +82,21 @@ export function ContactSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-8 lg:mb-16"
         >
-          <Badge variant="outline" className="mb-4">
+          <Badge variant="outline" className="mb-3 lg:mb-4 text-xs lg:text-sm">
             Get in Touch
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 lg:mb-4 leading-tight">
             Ready to Transform Your Finances?
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-sm lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Take the first step towards financial success. Our expert team is ready to provide 
             personalized solutions for your business needs.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
           {/* Contact Information */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -105,10 +105,10 @@ export function ContactSection() {
             viewport={{ once: true }}
             className="lg:col-span-1"
           >
-            <div className="space-y-6">
+            <div className="space-y-4 lg:space-y-6">
               <div>
-                <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
-                <div className="space-y-4">
+                <h3 className="text-xl lg:text-2xl font-bold mb-4 lg:mb-6">Contact Information</h3>
+                <div className="space-y-3 lg:space-y-4">
                   {contactInfo.map((info, index) => {
                     const IconComponent = info.icon
                     return (
@@ -120,16 +120,16 @@ export function ContactSection() {
                         viewport={{ once: true }}
                         whileHover={{ scale: 1.02 }}
                       >
-                        <Card className="p-4 hover:shadow-lg transition-all duration-300">
+                        <Card className="p-3 lg:p-4 hover:shadow-lg transition-all duration-300">
                           <CardContent className="p-0">
-                            <div className="flex items-start space-x-4">
-                              <div className={`p-3 rounded-lg bg-gradient-to-br ${info.color} text-white shadow-lg`}>
-                                <IconComponent className="h-5 w-5" />
+                            <div className="flex items-start space-x-3 lg:space-x-4">
+                              <div className={`p-2 lg:p-3 rounded-lg bg-gradient-to-br ${info.color} text-white shadow-lg flex-shrink-0`}>
+                                <IconComponent className="h-4 w-4 lg:h-5 lg:w-5" />
                               </div>
-                              <div>
-                                <h4 className="font-semibold mb-2">{info.title}</h4>
+                              <div className="min-w-0 flex-1">
+                                <h4 className="font-semibold mb-1 lg:mb-2 text-sm lg:text-base">{info.title}</h4>
                                 {info.details.map((detail, idx) => (
-                                  <p key={idx} className="text-muted-foreground text-sm">
+                                  <p key={idx} className="text-muted-foreground text-xs lg:text-sm leading-relaxed">
                                     {detail}
                                   </p>
                                 ))}
@@ -151,12 +151,12 @@ export function ContactSection() {
                 viewport={{ once: true }}
               >
                 <Card className="bg-gradient-to-br from-primary/5 to-blue-50 border-primary/20">
-                  <CardContent className="p-6">
-                    <h4 className="font-semibold mb-4 flex items-center">
-                      <Calendar className="h-5 w-5 mr-2 text-primary" />
+                  <CardContent className="p-4 lg:p-6">
+                    <h4 className="font-semibold mb-3 lg:mb-4 flex items-center text-sm lg:text-base">
+                      <Calendar className="h-4 w-4 lg:h-5 lg:w-5 mr-2 text-primary" />
                       Why Contact Us Today?
                     </h4>
-                    <ul className="space-y-3">
+                    <ul className="space-y-2 lg:space-y-3">
                       {benefits.map((benefit, index) => (
                         <motion.li
                           key={index}
@@ -166,13 +166,13 @@ export function ContactSection() {
                           viewport={{ once: true }}
                           className="flex items-center space-x-3"
                         >
-                          <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
-                          <span className="text-sm">{benefit}</span>
+                          <CheckCircle className="h-3 w-3 lg:h-4 lg:w-4 text-green-500 flex-shrink-0" />
+                          <span className="text-xs lg:text-sm">{benefit}</span>
                         </motion.li>
                       ))}
                     </ul>
-                    <Button className="w-full mt-6" variant="outline">
-                      <Phone className="h-4 w-4 mr-2" />
+                    <Button className="w-full mt-4 lg:mt-6 text-sm" variant="outline">
+                      <Phone className="h-3 w-3 lg:h-4 lg:w-4 mr-2" />
                       Call Now: +63 950 761 2580
                     </Button>
                   </CardContent>
@@ -186,17 +186,17 @@ export function ContactSection() {
                 transition={{ delay: 0.6 }}
                 viewport={{ once: true }}
               >
-                <div className="w-full h-[200px] rounded-lg bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-6">
+                <div className="w-full h-[150px] lg:h-[200px] rounded-lg bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4 lg:p-6">
                   <div className="text-center">
                     <Image
                       src="/images/logo.png"
                       alt="BDA Office"
-                      width={150}
-                      height={100}
-                      className="mx-auto drop-shadow-sm object-contain"
-                      style={{ maxHeight: '100px', width: 'auto' }}
+                      width={120}
+                      height={80}
+                      className="mx-auto drop-shadow-sm object-contain lg:w-[150px] lg:h-[100px]"
+                      style={{ maxHeight: '80px', width: 'auto' }}
                     />
-                    <p className="text-sm text-gray-600 mt-2">Our Professional Office</p>
+                    <p className="text-xs lg:text-sm text-gray-600 mt-2">Our Professional Office</p>
                   </div>
                 </div>
               </motion.div>
@@ -373,21 +373,21 @@ export function ContactSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
           viewport={{ once: true }}
-          className="mt-16 text-center"
+          className="mt-12 lg:mt-16 text-center"
         >
           <Card className="bg-gradient-to-r from-primary to-blue-600 text-white border-0 shadow-xl">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-4">Need Immediate Assistance?</h3>
-              <p className="mb-6 text-blue-100">
+            <CardContent className="p-6 lg:p-8">
+              <h3 className="text-lg lg:text-2xl font-bold mb-3 lg:mb-4">Need Immediate Assistance?</h3>
+              <p className="mb-4 lg:mb-6 text-blue-100 text-sm lg:text-base leading-relaxed">
                 For urgent accounting matters or time-sensitive tax issues, contact us directly.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button variant="secondary" size="lg">
-                  <Phone className="h-5 w-5 mr-2" />
+              <div className="flex flex-col sm:flex-row gap-3 lg:gap-4 justify-center">
+                <Button variant="secondary" size="lg" className="text-sm lg:text-base">
+                  <Phone className="h-4 w-4 lg:h-5 lg:w-5 mr-2" />
                   Call Emergency Line
                 </Button>
-                <Button variant="outline" size="lg" className="bg-white/10 border-white/20 text-white hover:bg-white hover:text-primary">
-                  <Mail className="h-5 w-5 mr-2" />
+                <Button variant="outline" size="lg" className="bg-white/10 border-white/20 text-white hover:bg-white hover:text-primary text-sm lg:text-base">
+                  <Mail className="h-4 w-4 lg:h-5 lg:w-5 mr-2" />
                   Send Urgent Email
                 </Button>
               </div>
