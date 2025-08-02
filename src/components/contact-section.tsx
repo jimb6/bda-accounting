@@ -12,14 +12,14 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Phone",
-    details: ["(555) 123-4567", "(555) 123-4568"],
-    color: "from-blue-500 to-cyan-500"
+    details: ["+63 950 761 2580", "Available during business hours"],
+    color: "text-green-600"
   },
   {
     icon: Mail,
     title: "Email",
-    details: ["info@bdaaccounting.com", "support@bdaaccounting.com"],
-    color: "from-green-500 to-emerald-500"
+    details: ["workspace@bonhocdemerincpafirm.com", "General inquiries & consultations"],
+    color: "text-blue-600"
   },
   {
     icon: MapPin,
@@ -173,7 +173,7 @@ export function ContactSection() {
                     </ul>
                     <Button className="w-full mt-6" variant="outline">
                       <Phone className="h-4 w-4 mr-2" />
-                      Call Now: (555) 123-4567
+                      Call Now: +63 950 761 2580
                     </Button>
                   </CardContent>
                 </Card>
@@ -286,7 +286,7 @@ export function ContactSection() {
                         value={formData.phone}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 border border-input rounded-lg bg-background focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                        placeholder="(555) 123-4567"
+                        placeholder="+63 9XX XXX XXXX"
                       />
                     </motion.div>
                   </div>

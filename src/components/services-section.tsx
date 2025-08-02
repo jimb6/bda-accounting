@@ -9,48 +9,48 @@ import { Calculator, Users, FileText, Shield, ArrowRight, CheckCircle } from "lu
 
 const services = [
   {
-    title: "Accounting Services",
-    description: "Comprehensive bookkeeping, financial statements, and accounting solutions tailored to your business needs.",
+    title: "Tax Compliance Services",
+    description: "Efficient and accurate tax obligation management ensuring compliance while addressing business tax burdens.",
     icon: Calculator,
-    features: ["Monthly Bookkeeping", "Financial Statements", "Cash Flow Management", "Payroll Processing"],
-    image: "Accounting and bookkeeping",
+    features: ["Individual Tax Returns", "Business Tax Returns", "Tax Planning", "Regulatory Compliance"],
+    image: "Tax compliance documents",
     color: "from-blue-500 to-cyan-500",
     bgColor: "bg-blue-50"
   },
   {
-    title: "Business Consultation",
-    description: "Strategic financial advice and business planning to help you make informed decisions and grow your business.",
-    icon: Users,
-    features: ["Financial Planning", "Business Strategy", "Growth Planning", "Risk Assessment"],
-    image: "Business meeting",
+    title: "Business Registration",
+    description: "Streamlined registration process for new ventures and regulatory changes with expert guidance.",
+    icon: FileText,
+    features: ["SEC Registration", "BIR Registration", "Local Permits", "Professional Licenses"],
+    image: "Business registration process",
     color: "from-green-500 to-emerald-500",
     bgColor: "bg-green-50"
   },
   {
-    title: "Tax Filing & Planning",
-    description: "Expert tax preparation and strategic planning to minimize your tax liability and ensure compliance.",
-    icon: FileText,
-    features: ["Individual Tax Returns", "Business Tax Returns", "Tax Planning", "IRS Representation"],
-    image: "Tax documents",
+    title: "Audit Services",
+    description: "Rigorous auditing procedures providing transparency and confidence for stakeholders.",
+    icon: Shield,
+    features: ["Financial Audits", "Compliance Reviews", "Internal Controls", "Risk Assessment"],
+    image: "Professional audit process",
     color: "from-purple-500 to-violet-500",
     bgColor: "bg-purple-50"
   },
   {
-    title: "Audit Services",
-    description: "Professional audit and assurance services to provide confidence in your financial reporting.",
-    icon: Shield,
-    features: ["Financial Audits", "Compliance Reviews", "Internal Controls", "Audit Preparation"],
-    image: "Audit process",
+    title: "Management Accounting",
+    description: "Strategic financial insights and reporting to help you make informed business decisions.",
+    icon: Users,
+    features: ["Financial Reporting", "Budget Analysis", "Performance Metrics", "Strategic Planning"],
+    image: "Management accounting consultation",
     color: "from-orange-500 to-red-500",
     bgColor: "bg-orange-50"
   },
 ]
 
 const stats = [
-  { value: "500+", label: "Clients Served", icon: "👥" },
-  { value: "25+", label: "Years Experience", icon: "📅" },
+  { value: "200+", label: "Clients Served", icon: "👥" },
+  { value: "8+", label: "Years Experience", icon: "📅" },
   { value: "99%", label: "Client Satisfaction", icon: "⭐" },
-  { value: "$50M+", label: "Tax Savings Generated", icon: "💰" },
+  { value: "₱50M+", label: "Business Value Created", icon: "💰" },
 ]
 
 const containerVariants = {

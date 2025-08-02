@@ -27,25 +27,25 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Phone",
-    details: ["Main: (555) 123-4567", "Fax: (555) 123-4568"],
+    details: ["Main: +63 950 761 2580", "Available during business hours"],
     color: "text-green-600"
   },
   {
     icon: Mail,
     title: "Email", 
-    details: ["info@bda-accounting.com", "support@bda-accounting.com"],
+    details: ["workspace@bonhocdemerincpafirm.com", "General inquiries & consultations"],
     color: "text-blue-600"
   },
   {
     icon: MapPin,
     title: "Address",
-    details: ["123 Business District", "Suite 450", "City, State 12345"],
+    details: ["Door No. 4 Saint John Paul II College of Davao", "Ecoland Drive, Matina", "Davao City, Philippines, 8000"],
     color: "text-red-600"
   },
   {
     icon: Clock,
     title: "Business Hours",
-    details: ["Mon-Fri: 8:00 AM - 6:00 PM", "Sat: 9:00 AM - 2:00 PM", "Sun: By Appointment"],
+    details: ["Mon-Fri: 8:00 AM - 5:00 PM", "Sat: 8:00 AM - 12:00 PM", "Sun: By Appointment"],
     color: "text-purple-600"
   }
 ]
@@ -53,27 +53,27 @@ const contactInfo = [
 const offices = [
   {
     name: "Main Office",
-    address: "123 Business District, Suite 450",
-    city: "Downtown City",
-    phone: "(555) 123-4567",
-    specialties: ["Tax Preparation", "Business Consulting", "Audit Services"],
-    image: "Modern office building exterior"
+    address: "Door No. 4 Saint John Paul II College of Davao, Ecoland Drive, Matina",
+    city: "Davao City, Philippines",
+    phone: "+63 950 761 2580",
+    specialties: ["Tax Compliance", "Business Registration", "Management Accounting"],
+    image: "Modern CPA office in Davao City"
   },
   {
-    name: "North Branch",
-    address: "456 Commerce Avenue, Floor 3", 
-    city: "North City",
-    phone: "(555) 123-4570",
-    specialties: ["Small Business Services", "Bookkeeping", "Payroll"],
-    image: "Professional office space"
+    name: "Asia-Pacific Services",
+    address: "Regional Service Coverage", 
+    city: "Multiple Countries",
+    phone: "+63 950 761 2580",
+    specialties: ["International Compliance", "Cross-border Services", "Regional Consulting"],
+    image: "Asia-Pacific regional services"
   },
   {
-    name: "West Location",
-    address: "789 Professional Plaza, Suite 200",
-    city: "West City", 
-    phone: "(555) 123-4573",
-    specialties: ["Individual Tax", "Financial Planning", "Consultation"],
-    image: "Contemporary office building"
+    name: "Digital Services Hub",
+    address: "Online Consultation Platform",
+    city: "Virtual Office", 
+    phone: "+63 950 761 2580",
+    specialties: ["Virtual Consultations", "Digital Solutions", "Remote Support"],
+    image: "Digital accounting solutions"
   }
 ]
 
@@ -150,7 +150,7 @@ export function ContactPageContent() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-primary hover:bg-gray-100">
                 <Phone className="mr-2 h-5 w-5" />
-                Call (555) 123-4567
+                Call +63 950 761 2580
               </Button>
               <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary">
                 <Calendar className="mr-2 h-5 w-5" />
@@ -255,7 +255,7 @@ export function ContactPageContent() {
                         <Input
                           id="phone"
                           type="tel"
-                          placeholder="(555) 123-4567"
+                          placeholder="+63 9XX XXX XXXX"
                           value={formData.phone}
                           onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleInputChange("phone", e.target.value)}
                         />
@@ -346,9 +346,9 @@ export function ContactPageContent() {
                     textColor="text-gray-600"
                   />
                   <div className="space-y-2">
-                    <p className="font-semibold">Bonohc, Demerin & Associates</p>
-                    <p className="text-sm text-muted-foreground">123 Business District, Suite 450</p>
-                    <p className="text-sm text-muted-foreground">Downtown City, State 12345</p>
+                    <p className="font-semibold">Bonhoc, Demerin & Associates</p>
+                    <p className="text-sm text-muted-foreground">Door No. 4 Saint John Paul II College of Davao</p>
+                    <p className="text-sm text-muted-foreground">Ecoland Drive, Matina, Davao City, Philippines, 8000</p>
                     <Button variant="outline" className="w-full mt-4">
                       <MapPin className="mr-2 h-4 w-4" />
                       Get Directions
@@ -506,11 +506,11 @@ export function ContactPageContent() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-primary hover:bg-gray-100">
                 <Phone className="mr-2 h-5 w-5" />
-                Call Emergency Line
+                Call +63 950 761 2580
               </Button>
               <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary">
                 <Mail className="mr-2 h-5 w-5" />
-                Email Urgent Request
+                Email Us Today
               </Button>
             </div>
           </motion.div>

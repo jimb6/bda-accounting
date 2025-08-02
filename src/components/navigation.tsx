@@ -24,16 +24,16 @@ export function Navigation() {
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-1">
               <Phone className="h-3 w-3" />
-              <span>(555) 123-4567</span>
+              <span>+63 950 761 2580</span>
             </div>
             <div className="flex items-center space-x-1">
               <Mail className="h-3 w-3" />
-              <span>info@bdaaccounting.com</span>
+              <span>workspace@bonhocdemerincpafirm.com</span>
             </div>
           </div>
           <div className="hidden md:flex items-center space-x-1">
             <MapPin className="h-3 w-3" />
-            <span>123 Business Ave, Suite 100, City, ST 12345</span>
+            <span>Ecoland Drive, Matina, Davao City, Philippines</span>
           </div>
         </div>
       </div>

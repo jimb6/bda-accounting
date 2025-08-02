@@ -18,8 +18,8 @@ import {
 } from "lucide-react"
 
 const stats = [
-  { number: "25+", label: "Years of Experience", icon: Calendar },
-  { number: "500+", label: "Satisfied Clients", icon: Users },
+  { number: "8+", label: "Years of Experience", icon: Calendar },
+  { number: "200+", label: "Satisfied Clients", icon: Users },
   { number: "99%", label: "Client Retention Rate", icon: Star },
   { number: "24/7", label: "Support Available", icon: Shield }
 ]
@@ -49,56 +49,56 @@ const values = [
 
 const team = [
   {
-    name: "Sarah Bonohc",
-    title: "Senior Partner & CPA",
-    specialization: "Tax Strategy & Business Consulting",
-    experience: "15+ years",
-    education: "MBA Finance, CPA License",
-    bio: "Sarah specializes in complex tax planning and business strategy for growing companies. She has helped hundreds of businesses optimize their financial operations."
-  },
-  {
-    name: "Michael Demerin", 
-    title: "Partner & CPA",
-    specialization: "Audit & Assurance Services",
-    experience: "12+ years",
-    education: "MS Accounting, CPA License", 
-    bio: "Michael leads our audit practice and ensures the highest standards of financial reporting and compliance for our clients."
-  },
-  {
-    name: "Jennifer Associates",
-    title: "Senior Manager",
-    specialization: "Small Business Accounting",
+    name: "Joevanie L. Bonhoc",
+    title: "Co-Founder & Senior Partner CPA",
+    specialization: "Tax Compliance & Business Strategy",
     experience: "10+ years",
-    education: "BS Accounting, EA License",
-    bio: "Jennifer focuses on helping small businesses establish strong financial foundations and sustainable growth strategies."
+    education: "CPA License, Business Management",
+    bio: "Co-founder of Bonhoc, Demerin & Associates with extensive experience in tax compliance and strategic business planning for SMEs across the Philippines and Asia-Pacific region."
+  },
+  {
+    name: "Marjo Q. Demerin-Bonhoc", 
+    title: "Co-Founder & Senior Partner CPA",
+    specialization: "Audit & Management Accounting",
+    experience: "10+ years",
+    education: "CPA License, Financial Management", 
+    bio: "Co-founder and accomplished CPA specializing in audit services and management accounting, helping businesses achieve transparency and optimize their financial operations."
+  },
+  {
+    name: "Our Growing Team",
+    title: "Talented CPA Professionals",
+    specialization: "Comprehensive Accounting Services",
+    experience: "Varied Experience Levels",
+    education: "CPA Licenses & Certifications",
+    bio: "Our dynamic team continues to expand with new talented CPAs, bringing fresh perspectives and expertise to serve our diverse clientele."
   }
 ]
 
 const milestones = [
   {
-    year: "1998",
+    year: "2017",
     title: "Firm Founded",
-    description: "Started as a small practice focused on individual tax preparation and basic bookkeeping services."
+    description: "Founded by Joevanie L. Bonhoc and Marjo Q. Demerin-Bonhoc, two accomplished CPAs with a vision to empower SMEs."
   },
   {
-    year: "2005", 
-    title: "Business Expansion",
-    description: "Expanded services to include business consulting and audit services, serving growing companies."
+    year: "2018", 
+    title: "Regional Expansion",
+    description: "Extended services beyond the Philippines to serve clients across the Asia-Pacific Region."
   },
   {
-    year: "2012",
-    title: "Technology Integration", 
-    description: "Implemented cloud-based accounting systems and digital workflows for enhanced client service."
+    year: "2020",
+    title: "Digital Transformation", 
+    description: "Implemented digital solutions and remote service capabilities to better serve clients during changing times."
   },
   {
-    year: "2018",
-    title: "Partnership Formation",
-    description: "Established current partnership structure with specialized expertise across all service areas."
+    year: "2022",
+    title: "Team Growth",
+    description: "Expanded our team by welcoming new talented CPAs to meet growing client demands."
   },
   {
-    year: "2023",
-    title: "Digital Excellence",
-    description: "Launched comprehensive digital platform for seamless client collaboration and service delivery."
+    year: "2025",
+    title: "Innovation Leadership",
+    description: "Continuing to lead in providing comprehensive accounting solutions with cutting-edge technology and expertise."
   }
 ]
 
@@ -132,11 +132,12 @@ export function AboutPageContent() {
               About Our Firm
             </Badge>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Bonohc, Demerin & Associates
+              Bonhoc, Demerin & Associates
             </h1>
             <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
-              For over 25 years, we&apos;ve been providing exceptional accounting, tax, and business 
-              consulting services to individuals and businesses throughout the region.
+              For over 8 years, we&apos;ve been empowering Small and Medium Enterprises across 
+              the Philippines and Asia-Pacific Region with comprehensive accounting and 
+              business solutions.
             </p>
             <Button size="lg" className="bg-white text-primary hover:bg-gray-100">
               Meet Our Team
@@ -182,20 +183,22 @@ export function AboutPageContent() {
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Story</h2>
               <p className="text-lg text-muted-foreground mb-6">
-                Founded in 1998, Bonohc, Demerin & Associates began as a small accounting practice 
-                with a simple mission: to provide personalized, high-quality financial services 
-                that help our clients achieve their goals.
+                Founded in 2017, Bonhoc, Demerin & Associates is a distinguished professional 
+                firm established by Joevanie L. Bonhoc and Marjo Q. Demerin-Bonhoc, both 
+                accomplished Certified Public Accountants with more than a decade of experience 
+                in the accounting and business industry.
               </p>
               <p className="text-lg text-muted-foreground mb-6">
-                Over the years, we&apos;ve grown into a full-service accounting firm, but our core 
-                values remain unchanged. We believe in building lasting relationships with our 
-                clients, understanding their unique needs, and providing solutions that drive 
-                real business results.
+                Our firm is dedicated to empowering Small and Medium Enterprises (SMEs) across 
+                the Philippines by providing solutions to address tax burdens and facilitating 
+                business growth. Over the years, we have successfully assisted numerous clients, 
+                not only within the Philippines but also from various countries across the 
+                Asia-Pacific Region.
               </p>
               <p className="text-lg text-muted-foreground mb-8">
-                Today, we serve hundreds of clients ranging from individuals to large corporations, 
-                always maintaining the personal touch and attention to detail that has been our 
-                hallmark from the beginning.
+                Our dynamic team continues to expand, welcoming new talented CPAs. Our commitment 
+                to excellence, client-centric approach, and international reach make us the ideal 
+                partner for SMEs seeking to thrive in a competitive business landscape.
               </p>
               <Button className="w-full sm:w-auto">
                 Learn About Our Services

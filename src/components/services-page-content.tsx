@@ -21,106 +21,106 @@ import {
 
 const services = [
   {
-    id: "accounting",
-    title: "Accounting Services",
-    description: "Complete financial management solutions for businesses of all sizes",
+    id: "tax-compliance",
+    title: "Tax Compliance Services",
+    description: "Efficient and accurate tax obligation management for your business",
     icon: Calculator,
-    image: "Professional accounting workspace",
+    image: "Tax compliance documentation",
     color: "from-blue-500 to-cyan-500",
     bgColor: "bg-blue-50",
     features: [
-      "Monthly Bookkeeping & Record Management",
-      "Financial Statement Preparation",
-      "Cash Flow Analysis & Management", 
-      "Accounts Payable/Receivable Management",
-      "Payroll Processing & Administration",
-      "Budget Planning & Variance Analysis",
-      "Financial Reporting & Analytics",
-      "QuickBooks Setup & Training"
+      "Individual Tax Return Preparation",
+      "Business Tax Returns (All Entity Types)",
+      "Tax Planning & Strategy Consultation",
+      "Quarterly Tax Compliance",
+      "Multi-jurisdictional Tax Filing",
+      "Tax Audit Support & Representation",
+      "Year-End Tax Planning Sessions",
+      "Regulatory Compliance Monitoring"
     ],
-    pricing: "Starting at $299/month",
-    turnaround: "Monthly deliverables"
+    pricing: "Starting at ₱15,000 per return",
+    turnaround: "Within 7 business days"
   },
   {
-    id: "tax",
-    title: "Tax Filing & Planning",
-    description: "Expert tax preparation and strategic planning to minimize your liability",
+    id: "business-registration",
+    title: "Business Registration Services",
+    description: "Streamlined registration process for new ventures and regulatory changes",
     icon: FileText,
-    image: "Tax documents and planning",
+    image: "Business registration documents",
     color: "from-green-500 to-emerald-500",
     bgColor: "bg-green-50",
     features: [
-      "Individual Tax Return Preparation",
-      "Business Tax Returns (All Entity Types)",
-      "Multi-State Tax Filing",
-      "Tax Planning & Strategy Consultation",
-      "IRS Audit Defense & Representation",
-      "Quarterly Estimated Tax Payments",
-      "Tax Loss Harvesting Strategies",
-      "Year-End Tax Planning Sessions"
+      "Business Name Registration",
+      "SEC Registration & Incorporation",
+      "BIR Registration & TIN Application",
+      "Local Government Permits",
+      "SSS, PhilHealth & PAG-IBIG Registration",
+      "Professional License Applications",
+      "Foreign Investment Registration",
+      "Regulatory Compliance Setup"
     ],
-    pricing: "Starting at $199 per return",
-    turnaround: "Within 5 business days"
+    pricing: "Starting at ₱25,000 per registration",
+    turnaround: "2-4 weeks typical"
   },
   {
-    id: "consultation",
-    title: "Business Consultation",
-    description: "Strategic financial guidance to accelerate your business growth",
-    icon: Users,
-    image: "Business strategy meeting",
+    id: "audit-services",
+    title: "Audit Services",
+    description: "Rigorous auditing procedures for transparency and stakeholder confidence",
+    icon: Shield,
+    image: "Professional audit documentation",
     color: "from-purple-500 to-violet-500",
     bgColor: "bg-purple-50",
-    features: [
-      "Financial Health Assessment",
-      "Business Plan Development",
-      "Growth Strategy Planning",
-      "Cash Flow Optimization",
-      "Investment Analysis & Decisions",
-      "Risk Assessment & Management",
-      "Merger & Acquisition Advisory",
-      "Exit Strategy Planning"
-    ],
-    pricing: "Starting at $150/hour",
-    turnaround: "Flexible scheduling"
-  },
-  {
-    id: "audit",
-    title: "Audit & Assurance Services",
-    description: "Professional audit services to ensure accuracy and compliance",
-    icon: Shield,
-    image: "Audit documentation review",
-    color: "from-orange-500 to-red-500",
-    bgColor: "bg-orange-50",
     features: [
       "Financial Statement Audits",
       "Internal Control Reviews",
       "Compliance Audits",
       "Due Diligence Reviews",
       "Fraud Investigation Support",
-      "Nonprofit Organization Audits",
-      "Employee Benefit Plan Audits",
-      "Compilation & Review Services"
+      "Regulatory Audit Requirements",
+      "Stakeholder Assurance Reports",
+      "Risk Assessment & Management"
     ],
-    pricing: "Custom pricing",
-    turnaround: "2-4 weeks typical"
+    pricing: "Custom pricing based on scope",
+    turnaround: "3-6 weeks typical"
+  },
+  {
+    id: "management-accounting",
+    title: "Management Accounting Services",
+    description: "Strategic financial insights and reporting for informed business decisions",
+    icon: Users,
+    image: "Financial strategy consultation",
+    color: "from-orange-500 to-red-500",
+    bgColor: "bg-orange-50",
+    features: [
+      "Monthly Financial Reporting",
+      "Budget Planning & Analysis",
+      "Cash Flow Management",
+      "Cost Analysis & Control",
+      "Performance Measurement Systems",
+      "Strategic Financial Planning",
+      "Business Process Optimization",
+      "Investment Decision Support"
+    ],
+    pricing: "Starting at ₱20,000/month",
+    turnaround: "Monthly deliverables"
   }
 ]
 
 const specialtyServices = [
   {
-    title: "Startup Packages",
-    description: "Complete financial setup for new businesses",
-    features: ["Entity formation assistance", "Initial bookkeeping setup", "Tax ID registration", "First-year tax planning"]
+    title: "SME Growth Packages",
+    description: "Comprehensive solutions designed specifically for Small and Medium Enterprises",
+    features: ["Business registration assistance", "Tax compliance setup", "Management accounting", "Strategic planning support"]
   },
   {
-    title: "Nonprofit Services", 
-    description: "Specialized accounting for nonprofit organizations",
-    features: ["Grant management", "Donor reporting", "Form 990 preparation", "Compliance monitoring"]
+    title: "Asia-Pacific Services", 
+    description: "International accounting services for businesses across the Asia-Pacific Region",
+    features: ["Cross-border tax compliance", "Multi-jurisdictional reporting", "International business setup", "Regional regulatory guidance"]
   },
   {
-    title: "Estate Planning",
-    description: "Financial planning for wealth transfer and estate management",
-    features: ["Estate tax planning", "Trust administration", "Succession planning", "Gift tax strategies"]
+    title: "Digital Solutions",
+    description: "Modern technology-driven accounting solutions for efficient business operations",
+    features: ["Cloud-based accounting systems", "Digital financial reporting", "Online consultation services", "Automated compliance monitoring"]
   }
 ]
 
@@ -173,8 +173,8 @@ export function ServicesPageContent() {
               Comprehensive Financial Solutions
             </h1>
             <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
-              From accounting and tax preparation to business consultation and audit services, 
-              we provide everything your business needs to thrive financially.
+              From tax compliance and business registration to audit services and management accounting, 
+              we provide everything your SME needs to thrive in the Philippines and across the Asia-Pacific Region.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-primary hover:bg-gray-100">
@@ -284,7 +284,7 @@ export function ServicesPageContent() {
                           <ArrowRight className="ml-2 h-4 w-4" />
                         </Button>
                         <Button variant="outline" className="flex-1">
-                          Call (555) 123-4567
+                          Call +63 950 761 2580
                         </Button>
                       </div>
                     </CardContent>
@@ -454,7 +454,7 @@ export function ServicesPageContent() {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary">
-                Call (555) 123-4567
+                Call +63 950 761 2580
               </Button>
             </div>
           </motion.div>

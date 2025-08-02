@@ -9,31 +9,31 @@ import { ArrowRight, CheckCircle, ChevronLeft, ChevronRight, Star, Award, Trendi
 
 const heroSlides = [
   {
-    title: "Expert Accounting Services",
-    subtitle: "Your Business Success",
-    description: "25+ years of trusted financial expertise to help your business thrive and grow.",
-    image: "Professional team meeting",
+    title: "Expert CPA Services",
+    subtitle: "Empowering SMEs",
+    description: "8+ years of trusted financial expertise helping SMEs thrive across the Philippines and Asia-Pacific Region.",
+    image: "Professional CPA team consultation",
     bgColor: "bg-gradient-to-br from-blue-600 to-indigo-700"
   },
   {
-    title: "Tax Planning & Preparation",
-    subtitle: "Maximize Your Savings",
-    description: "Strategic tax solutions that minimize liability and ensure full compliance.",
-    image: "Tax documents and calculator",
+    title: "Tax Compliance Solutions",
+    subtitle: "Efficient & Accurate",
+    description: "Comprehensive tax services that ensure compliance while addressing your business tax burdens.",
+    image: "Tax compliance documentation",
     bgColor: "bg-gradient-to-br from-green-600 to-emerald-700"
   },
   {
-    title: "Business Consultation",
-    subtitle: "Strategic Growth Planning",
-    description: "Professional guidance to help you make informed financial decisions.",
-    image: "Business consultation meeting",
+    title: "Business Registration",
+    subtitle: "Streamlined Process",
+    description: "Expert assistance with business registrations and regulatory compliance for new ventures.",
+    image: "Business registration process",
     bgColor: "bg-gradient-to-br from-purple-600 to-violet-700"
   }
 ]
 
 const stats = [
-  { icon: Star, value: "500+", label: "Happy Clients" },
-  { icon: Award, value: "25+", label: "Years Experience" },
+  { icon: Star, value: "200+", label: "Happy Clients" },
+  { icon: Award, value: "8+", label: "Years Experience" },
   { icon: TrendingUp, value: "99%", label: "Success Rate" },
 ]
 

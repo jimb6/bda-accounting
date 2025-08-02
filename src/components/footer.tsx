@@ -24,24 +24,24 @@ export function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <div>
-              <h3 className="text-xl font-bold mb-2">BDA Accounting</h3>
+              <h3 className="text-xl font-bold mb-2">Bonhoc, Demerin & Associates</h3>
               <p className="text-sm opacity-90">
-                Bonohc, Demerin & Associates - Your trusted accounting partner for over 25 years.
+                Your trusted CPA firm empowering SMEs across the Philippines and Asia-Pacific Region since 2017.
               </p>
             </div>
             
             <div className="space-y-2 text-sm">
-              <div className="flex items-center space-x-2">
-                <MapPin className="h-4 w-4" />
-                <span>123 Business Ave, Suite 100</span>
+              <div className="flex items-start space-x-2">
+                <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                <span>Door No. 4 Saint John Paul II College of Davao, Ecoland Drive, Matina, Davao City, Philippines, 8000</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
-                <span>(555) 123-4567</span>
+                <span>+63 950 761 2580</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
-                <span>info@bdaaccounting.com</span>
+                <span>workspace@bonhocdemerincpafirm.com</span>
               </div>
             </div>
           </div>
@@ -98,8 +98,10 @@ export function Footer() {
             </div>
             
             <div className="flex space-x-4 mt-6">
-              <Button variant="ghost" size="icon" className="h-8 w-8 text-primary-foreground hover:bg-primary-foreground/20">
-                <Facebook className="h-4 w-4" />
+              <Button variant="ghost" size="icon" className="h-8 w-8 text-primary-foreground hover:bg-primary-foreground/20" asChild>
+                <Link href="https://www.facebook.com/bonhocdemerincpafirm" target="_blank" rel="noopener noreferrer">
+                  <Facebook className="h-4 w-4" />
+                </Link>
               </Button>
               <Button variant="ghost" size="icon" className="h-8 w-8 text-primary-foreground hover:bg-primary-foreground/20">
                 <Twitter className="h-4 w-4" />

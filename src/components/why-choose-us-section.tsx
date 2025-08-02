@@ -280,7 +280,7 @@ export function WhyChooseUsSection() {
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button variant="outline" size="lg" className="text-lg px-8">
-              Call (555) 123-4567
+              Call +63 950 761 2580
             </Button>
           </div>
         </motion.div>

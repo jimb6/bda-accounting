@@ -359,7 +359,7 @@ export function GetQuotePageContent() {
                           <Input
                             id="phone"
                             type="tel"
-                            placeholder="(555) 123-4567"
+                            placeholder="+63 9XX XXX XXXX"
                             value={formData.phone}
                             onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleInputChange("phone", e.target.value)}
                           />
