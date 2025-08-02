@@ -26,8 +26,6 @@ const servicePackages = [
     id: "basic",
     name: "Basic Package",
     description: "Essential services for small businesses",
-    startingPrice: "$299",
-    period: "/month",
     features: [
       "Monthly Bookkeeping",
       "Financial Statements",
@@ -41,8 +39,6 @@ const servicePackages = [
     id: "professional", 
     name: "Professional Package",
     description: "Comprehensive solution for growing businesses",
-    startingPrice: "$599",
-    period: "/month", 
     features: [
       "Everything in Basic",
       "Advanced Tax Planning",
@@ -57,8 +53,6 @@ const servicePackages = [
     id: "enterprise",
     name: "Enterprise Package", 
     description: "Full-service solution for large organizations",
-    startingPrice: "Custom",
-    period: "pricing",
     features: [
       "Everything in Professional",
       "Audit Services",
@@ -72,12 +66,12 @@ const servicePackages = [
 ]
 
 const additionalServices = [
-  { id: "audit", name: "Audit Services", price: "Starting at $2,500" },
-  { id: "consulting", name: "Business Consulting", price: "$150/hour" },
-  { id: "payroll", name: "Payroll Processing", price: "$25/employee/month" },
-  { id: "quickbooks", name: "QuickBooks Setup", price: "Starting at $500" },
-  { id: "tax-planning", name: "Tax Planning", price: "Starting at $300" },
-  { id: "financial-planning", name: "Financial Planning", price: "$200/hour" }
+  { id: "audit", name: "Audit Services" },
+  { id: "consulting", name: "Business Consulting" },
+  { id: "payroll", name: "Payroll Processing" },
+  { id: "quickbooks", name: "QuickBooks Setup" },
+  { id: "tax-planning", name: "Tax Planning" },
+  { id: "financial-planning", name: "Financial Planning" }
 ]
 
 const businessTypes = [
@@ -239,10 +233,6 @@ export function GetQuotePageContent() {
                   <CardHeader className="text-center">
                     <CardTitle className="text-2xl">{pkg.name}</CardTitle>
                     <CardDescription className="text-base">{pkg.description}</CardDescription>
-                    <div className="mt-4">
-                      <span className="text-4xl font-bold text-primary">{pkg.startingPrice}</span>
-                      <span className="text-muted-foreground">{pkg.period}</span>
-                    </div>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-3">
@@ -411,7 +401,7 @@ export function GetQuotePageContent() {
                           <Label htmlFor="annualRevenue">Annual Revenue (Optional)</Label>
                           <Input
                             id="annualRevenue"
-                            placeholder="e.g., $500,000"
+                            placeholder="e.g., 500,000"
                             value={formData.annualRevenue}
                             onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleInputChange("annualRevenue", e.target.value)}
                           />
@@ -440,14 +430,6 @@ export function GetQuotePageContent() {
                                   {servicePackages.find(p => p.id === selectedPackage)?.description}
                                 </p>
                               </div>
-                              <div className="text-right">
-                                <div className="text-lg font-bold text-primary">
-                                  {servicePackages.find(p => p.id === selectedPackage)?.startingPrice}
-                                </div>
-                                <div className="text-sm text-muted-foreground">
-                                  {servicePackages.find(p => p.id === selectedPackage)?.period}
-                                </div>
-                              </div>
                             </div>
                           </Card>
                         </div>
@@ -466,7 +448,6 @@ export function GetQuotePageContent() {
                                   <Label htmlFor={service.id} className="text-sm font-medium cursor-pointer">
                                     {service.name}
                                   </Label>
-                                  <p className="text-xs text-muted-foreground">{service.price}</p>
                                 </div>
                               </div>
                             ))}
