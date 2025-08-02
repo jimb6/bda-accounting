@@ -62,7 +62,9 @@ export function Navigation() {
                 {item.name}
               </Link>
             ))}
-            <Button>Get Quote</Button>
+            <Button asChild>
+              <Link href="/get-quote">Get Quote</Link>
+            </Button>
           </nav>
 
           {/* Mobile Navigation */}
@@ -85,7 +87,9 @@ export function Navigation() {
                     {item.name}
                   </Link>
                 ))}
-                <Button className="mt-4">Get Quote</Button>
+                <Button className="mt-4" asChild>
+                  <Link href="/get-quote">Get Quote</Link>
+                </Button>
               </div>
             </SheetContent>
           </Sheet>
